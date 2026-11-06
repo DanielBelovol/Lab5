@@ -306,7 +306,7 @@ function trainer(){
 
 function pagesView(sid, dir, n, title, note, pdf){
   const s = S[sid], w = String(n).length;
-  const pages = Array.from({length:n}, (_,i)=>`<img class="solp" loading="lazy" src="${dir}/${sid}-${String(i+1).padStart(w,"0")}.jpg" alt="Strona ${i+1} z ${n}">`).join("");
+  const pages = Array.from({length:n}, (_,i)=>`<img class="solp" loading="lazy" src="${dir}/${sid}-${String(i+1).padStart(w,"0")}.webp" alt="Strona ${i+1} z ${n}">`).join("");
   $("#app").innerHTML = `<button class="btn ghost" onclick="go('session','${sid}')">← ${s.month} ${s.year}</button>
    <div class="card"><h2>${title} – ${s.month} ${s.year}</h2>
    <div class="muted small">${n} stron(y). Przewijaj w dół – wszystko jest tutaj, nic nie trzeba pobierać. ${note}</div>
